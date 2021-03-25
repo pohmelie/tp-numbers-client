@@ -5,8 +5,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    container:
-      image: python:3.8-slim
+    container: python:3.8-slim
     steps:
       - run: |
           pip install flake8
@@ -15,10 +14,11 @@ jobs:
   test:
     needs: lint
     runs-on: ubuntu-latest
-    container:
-      image: python:3.8-slim
+    container: python:3.8-slim
     steps:
       - run: |
           pip install -e ./[dev]
+          ls -la
+          pwd
           pytest
 
