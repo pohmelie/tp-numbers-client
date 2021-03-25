@@ -2,9 +2,9 @@ name: numbers ci
 on: push
 
 jobs:
-  runs-on: ubuntu-latest
 
   lint:
+    runs-on: ubuntu-latest
     container:
       image: python:3.8-slim
     steps:
@@ -13,6 +13,8 @@ jobs:
           flake8
 
   test:
+    needs: lint
+    runs-on: ubuntu-latest
     container:
       image: python:3.8-slim
     steps:
