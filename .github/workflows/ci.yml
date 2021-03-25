@@ -3,16 +3,18 @@ on: push
 
 jobs:
   # runs-on: ubuntu-latest
-  container:
-    image: python:3.8-slim
 
   lint:
+    container:
+      image: python:3.8-slim
     steps:
       - run: |
           pip install flake8
           flake8
 
   test:
+    container:
+      image: python:3.8-slim
     steps:
       - run: |
           pip install -e ./[dev]
