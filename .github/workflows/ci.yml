@@ -1,0 +1,19 @@
+name: numbers
+on: push
+
+defaults:
+  conatiner: python:3.8-slim
+
+jobs:
+  lint:
+    steps:
+      - run: |
+          pip install flake8
+          flake8
+
+  test:
+    steps:
+      - run: |
+          pip install -e ./[dev]
+          pytest
+
