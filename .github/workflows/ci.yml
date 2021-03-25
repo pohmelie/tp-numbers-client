@@ -2,8 +2,7 @@ name: numbers
 on: push
 
 defaults:
-  runs-on: ubuntu-latest
-  conatiner:
+  conatainer:
     image: python:3.8-slim
 
 jobs:
