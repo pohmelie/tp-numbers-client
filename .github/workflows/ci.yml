@@ -1,12 +1,11 @@
-name: numbers
+name: numbers ci
 on: push
 
-defaults:
-  runs-on: ubuntu-latest
+jobs:
+  # runs-on: ubuntu-latest
   container:
     image: python:3.8-slim
 
-jobs:
   lint:
     steps:
       - run: |
