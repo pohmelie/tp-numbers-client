@@ -17,8 +17,8 @@ jobs:
     container: python:3.8-slim
     steps:
       - run: |
-          pip install -e ./[dev]
           ls -la
           pwd
+          pip install -e ./[dev]
           pytest
 
