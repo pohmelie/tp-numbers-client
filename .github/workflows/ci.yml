@@ -19,8 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          ls -la
-          pwd
           pip install -e ./[dev]
           pytest
 
