@@ -2,6 +2,7 @@ name: numbers
 on: push
 
 defaults:
+  runs-on: ubuntu-latest
   conatiner: python:3.8-slim
 
 jobs:
