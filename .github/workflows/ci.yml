@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.8-slim
     steps:
+      - uses: actions/checkout@v2
       - run: |
           pip install flake8
           flake8
@@ -16,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     container: python:3.8-slim
     steps:
+      - uses: actions/checkout@v2
       - run: |
           ls -la
           pwd
